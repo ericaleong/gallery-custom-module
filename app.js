@@ -15,7 +15,12 @@ app.set('view engine', 'pug');
 // --- GET endpoint handlers --- //
 app.get('/', function(req, res){
   res.render('index', gallery);
+})
+
+app.get('/gallery', function(req, res) {
+  res.json(gallery);
 });
+ 
 
 app.get('/gallery/:id', function(req, res){
   res.json(gallery.filter(function(gallery){
