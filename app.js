@@ -10,12 +10,31 @@ const app = express();
 
 // --- Run pug run --- //
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 
 // --- GET endpoint handlers --- //
-app.get('/', function(req, res){
-  res.render('index', gallery);
+
+// app.get('/', function(req, res) {
+//   res.render('index', {gallery});
+// })
+
+
+app.get('/', function(req, res) {
+  res.render('index', {gallery});
 })
+
+
+
+
+
+// app.get('/', function(req, res){
+//   res.render('index', gallery);
+// })
+
+// app.get('/', function( req, res) {
+//   res.json(gallery.id);
+// })
 
 app.get('/gallery', function(req, res) {
   res.json(gallery);
