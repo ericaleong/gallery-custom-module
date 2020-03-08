@@ -25,7 +25,7 @@
 
 
 
-<%
+<!-- <%
 gallery.forEach(function(item){
   %>
 
@@ -33,10 +33,32 @@ gallery.forEach(function(item){
   <li>
     <%= item.id %>
   </li>
+  <li>
+    <%= item.title %>
+  </li>
+  <li>
+
+  </li>
 </ul>
 <%
 })
-%>
+%> -->
+
+
+
+<section>
+  <% 
+      for(photo of gallery){ %>
+       <div class='card'>
+       <a href="/gallery/<%= photo.id  %> ">
+       <img src="./public/images/md<%= photo.fileName  %> " alt="<%= photo.title %>">
+       </a>
+       <h2><%= photo.title  %></h2>
+
+      </div>
+       <%}  %>
+   
+  </section>
  
   <%- include('partials/footer') %>
 </body>
