@@ -1,13 +1,57 @@
-html(lang="en")
-  head
-    title Id
-    style
-      include ../public/style.css
-  body
-    include partials/nav.pug
-    include partials/header.pug
-    h2 Gallery
-    h2 Gallery of pugs coming soon...
-    p #{gallery}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
 
-    include partials/footer.pug
+  <!-- <section>
+
+    <% 
+    for(photo of gallery){ %>
+     <figure>
+     <a href="/gallery/<%= photo.id  %> ">
+     <img src="public/images/md<%= photo.fileName  %> " alt="<%= photo.title %>">
+     </a>
+
+   </figure>
+     <%  }  %>
+
+  </section> -->
+
+
+
+<!-- <%
+gallery.forEach(function(item){
+  %>
+
+<ul>
+  <li>
+    <%= item.id %>
+  </li>
+  <li>
+    <%= item.title %>
+  </li>
+  <li>
+
+  </li>
+</ul>
+<%
+})
+%> -->
+
+
+
+<section>
+
+   
+</section>
+ 
+  <%- include('partials/footer') %>
+</body>
+</html>
+    
