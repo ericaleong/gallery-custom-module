@@ -1,0 +1,107 @@
+/* @import url('https://fonts.googleapis.com/css?family=Anton|Crimson+Text&display=swap');
+
+
+/* Reset and consistency for background color */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #D8CBC7;
+}
+
+
+/* Header style */
+h1 {
+  margin: 0;
+  padding: 5vh;
+
+  background-color: #E98A15;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 52px;
+  font-family: 'Anton', sans-serif;
+  color: #19231A;
+  letter-spacing: 0.8vw;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  color: #CC3F0C;
+  letter-spacing: 0.8vw;
+}
+
+
+/* Navigation Bar style*/
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 0;
+
+  background-color: #9A6D38;
+}
+
+li {
+  padding: 3vh 5vw;
+
+  list-style: none;
+
+  font-size: 20px;
+}
+
+li:hover {
+  background-color: #CC3F0C;
+
+  color: #D8CBC7;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  color: #D8CBC7;
+  letter-spacing: 0.5vw;
+}
+
+nav a:hover {
+  color: #ECE5F0;
+}
+
+
+/* Styles for any paragraph */
+p {
+  padding: 10vw;
+
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  color: #19231A;
+}
+
+
+/* Footer style */
+footer {
+  margin: 0;
+  padding: 2vh;
+
+  background-color: #33673B;
+
+  color: #D8CBC7;
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+}
+
+/* To override other paragraph styles*/
+footer p {
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+  color: #D8CBC7;
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+}
