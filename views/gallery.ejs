@@ -6,58 +6,20 @@
   <title>Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <%- include('partials/header') %>
-
-  <!-- <section>
-
+  <section>
     <% 
-    for(photo of gallery){ %>
-     <figure>
-     <a href="/gallery/<%= photo.id  %> ">
-     <img src="public/images/md<%= photo.fileName  %> " alt="<%= photo.title %>">
-     </a>
-
-   </figure>
-     <%  }  %>
-
-  </section> -->
-
-
-
-<!-- <%
-gallery.forEach(function(item){
-  %>
-
-<ul>
-  <li>
-    <%= item.id %>
-  </li>
-  <li>
-    <%= item.title %>
-  </li>
-  <li>
-
-  </li>
-</ul>
-<%
-})
-%> -->
-
-
-
-<section>
-  <% 
       for(photo of gallery){ %>
        <div class='card'>
-       <a href="/gallery/<%= photo.id  %> ">
-       <img src="./public/images/md<%= photo.fileName  %> " alt="<%= photo.title %>">
-       </a>
-       <h2><%= photo.title  %></h2>
+        <a href="/gallery/<%= photo.id  %> ">
+        <img src="images/sm/<%= photo.fileName  %> " alt="<%= photo.title %>">
+        </a>
+        <h2><%= photo.title  %></h2>
 
-      </div>
-       <%}  %>
-   
+        </div>
+    <%} %>
   </section>
  
   <%- include('partials/footer') %>
