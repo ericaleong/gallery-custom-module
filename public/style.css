@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ovo|Sen&display=swap');
 
 
+
 /* Reset and consistency for background color */
 body {
   margin: 0;
@@ -134,6 +135,8 @@ figcaption {
   font-family: 'Ovo', serif;
   color: #828E82;
 }
+
+
 
 /* Footer style */
 footer {
