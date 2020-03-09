@@ -33,41 +33,10 @@ h2 {
   letter-spacing: 0.8vw;
 }
 
-
-/* Navigation Bar style*/
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  margin: 0;
-
-  background-color: #9A6D38;
-}
-
-li {
-  padding: 3vh 5vw;
-
-  list-style: none;
-
-  font-size: 20px;
-}
-
-li:hover {
-  background-color: #CC3F0C;
-
-  color: #D8CBC7;
-}
-
-a {
-  text-decoration: none;
-  font-family: 'Anton', sans-serif;
-  color: #D8CBC7;
-  letter-spacing: 0.5vw;
-}
-
-nav a:hover {
-  color: #ECE5F0;
+/* Button style */
+button {
+ display: flex;
+ justify-content: center;
 }
 
 
@@ -79,6 +48,14 @@ p {
   font-family: 'Crimson Text', serif;
   font-size: 18px;
   color: #19231A;
+}
+
+/* Section (gallery) style */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
 }
 
 
