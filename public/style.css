@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Anton|Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arvo:700|Ovo&display=swap');
 
 
 /* Reset and consistency for background color */
@@ -6,56 +6,72 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #D8CBC7;
+  background-color: #F8FAF6;
 }
 
-
-/* Header style */
+/* Header styles */
 h1 {
   margin: 0;
   padding: 5vh;
 
-  background-color: #E98A15;
+  background-color: #242423;
 
   text-align: center;
   text-transform: uppercase;
   font-size: 52px;
-  font-family: 'Anton', sans-serif;
-  color: #19231A;
+  font-family: 'Arvo', serif;
+  color: #F5CB5C;
   letter-spacing: 0.8vw;
 }
 
 h2 {
-  text-transform: uppercase;
-  font-family: 'Anton', sans-serif;
-  font-size: 30px;
-  color: #CC3F0C;
-  letter-spacing: 0.8vw;
+  padding-bottom: 0.5em;
+  margin: 0;
+  font-family: 'Ovo', serif;
+  font-size: 24px;
+  color: #454745;
+  letter-spacing: 0.2vw;
 }
 
 /* Button style */
-button {
+button a{
  display: flex;
  justify-content: center;
+
+ padding: 3vh 5vw;
+
+ text-decoration: none;
+
+ font-size: 30px;
 }
 
 
-/* Styles for any paragraph */
-p {
-  padding: 10vw;
-
-  text-align: center;
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
-  color: #19231A;
-}
-
-/* Section (gallery) style */
+/* Gallery style */
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
 
+a{
+  text-decoration: none;
+  text-align: center;
+}
+
+.card{
+  margin: 2em;
+  /* background-color: white;
+  box-shadow: 0 0 10px rgba(14, 14, 14, 0.25); */
+}
+
+img {
+  padding: 2em;
+
+  border: 1px solid #B4B5B4;
+
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
 }
 
 
@@ -64,20 +80,9 @@ footer {
   margin: 0;
   padding: 2vh;
 
-  background-color: #33673B;
+  background-color: #F5CB5C;
 
-  color: #D8CBC7;
-  font-family: 'Crimson Text', serif;
-  font-size: 16px;
-}
-
-/* To override other paragraph styles*/
-footer p {
-  padding: 0;
-  margin: 0;
-
-  text-align: left;
-  color: #D8CBC7;
-  font-family: 'Crimson Text', serif;
+  color: #242423;
+  font-family: 'Ovo', serif;
   font-size: 16px;
 }
