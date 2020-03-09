@@ -13,12 +13,6 @@ app.use(express.static('public/images'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// --- Injecting data --- //
-app.use(function (req, res, next){
-  res.locals.gallery = gallery
-  next()
-})
-
 
 // --- Moment module for the date in footer --- //
 app.locals.twentyTwenty = function(){
@@ -38,10 +32,11 @@ app.get('/gallery', function(req, res) {
 app.get('/gallery/:id', function(req, res, next){
   for(photo of gallery){
     if(photo.id == req.params.id){
-      res.render('id',{title:`${req.params.id}`});
+      res.render('id',{title: `${req.params.id}`});
       return;
     }
   }
+  next();
 });
 
 
@@ -50,7 +45,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 
 // --- 404 error page --- //
-app.use(function(req, res, next){
+app.use(function(req, res){
   res.writeHead(404, {'Content-Type': 'text/html'});
   fs.createReadStream(__dirname + '/404.html').pipe(res);
 });
