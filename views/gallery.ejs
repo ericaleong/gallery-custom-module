@@ -9,16 +9,16 @@
 
 <body>
   <%- include('partials/header') %>
+
   <section>
     <% 
       for(photo of gallery){ %>
-       <div class='card'>
         <a href="/gallery/<%= photo.id  %> ">
-        <img src="images/sm/<%= photo.fileName  %> " alt="<%= photo.title %>">
-        </a>
-        <h2><%= photo.title  %></h2>
-
+        <div class='card'>
+          <img src="images/sm/<%= photo.fileName  %> " alt="<%= photo.title %>">
+          <h2><%= photo.title  %></h2>
         </div>
+        </a>
     <%} %>
   </section>
  
