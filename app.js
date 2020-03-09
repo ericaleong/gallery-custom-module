@@ -2,12 +2,9 @@ const path = require('path');
 const express = require('express');
 const fs = require('fs');
 const gallery = require('./gallery');
-const ejs = require('ejs');
 const moment = require('moment');
-
-
-// --- Run express --- //
 const app = express();
+
 
 app.use(express.static('public/images'));
 
@@ -15,6 +12,12 @@ app.use(express.static('public/images'));
 // --- Run ejs --- //
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// --- Injecting data --- //
+app.use(function (req, res, next){
+  res.locals.gallery = gallery
+  next()
+})
 
 
 // --- Moment module for the date in footer --- //
@@ -35,11 +38,10 @@ app.get('/gallery', function(req, res) {
 app.get('/gallery/:id', function(req, res, next){
   for(photo of gallery){
     if(photo.id == req.params.id){
-      res.render('id',{title:`${req.params.id}`})
+      res.render('id',{title:`${req.params.id}`});
       return;
     }
   }
-  next();
 });
 
 
