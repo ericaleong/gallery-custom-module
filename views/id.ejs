@@ -9,47 +9,21 @@
 <body>
   <%- include('partials/header') %>
 
-  <!-- <section>
-
+  <section>
     <% 
-    for(photo of gallery){ %>
-     <figure>
-     <a href="/gallery/<%= photo.id  %> ">
-     <img src="public/images/md<%= photo.fileName  %> " alt="<%= photo.title %>">
-     </a>
+      for(photo of gallery){
+        if(photo.id == title) { %>
+       <div class='single-photo'>
+        <a href="/gallery/<%= photo.id  %> ">
+        <img src="../images/md/<%= photo.fileName  %> " alt="<%= photo.title %>">
+        </a>
+        <h2><%= photo.title  %></h2>
 
-   </figure>
-     <%  }  %>
+        </div>
+    <%} } %>
+  </section>
 
-  </section> -->
-
-
-
-<!-- <%
-gallery.forEach(function(item){
-  %>
-
-<ul>
-  <li>
-    <%= item.id %>
-  </li>
-  <li>
-    <%= item.title %>
-  </li>
-  <li>
-
-  </li>
-</ul>
-<%
-})
-%> -->
-
-
-
-<section>
-
-   
-</section>
+  <button><a href="./gallery">Back to gallery</a></button>
  
   <%- include('partials/footer') %>
 </body>
