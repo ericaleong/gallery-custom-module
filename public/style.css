@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo:700|Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ovo|Sen&display=swap');
 
 
 /* Reset and consistency for background color */
@@ -6,21 +6,23 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #F8FAF6;
+  background-color: #F9F7F4;
 }
 
-/* Header styles */
+
+
+/* Heading styles */
 h1 {
   margin: 0;
   padding: 5vh;
 
-  background-color: #242423;
+  background-color: #F9E5C7;
 
   text-align: center;
   text-transform: uppercase;
   font-size: 52px;
-  font-family: 'Arvo', serif;
-  color: #F5CB5C;
+  font-family: 'Sen', sans-serif;
+  color: #3A606E;
   letter-spacing: 0.8vw;
 }
 
@@ -28,12 +30,31 @@ h2 {
   padding-bottom: 0.5em;
   margin: 0;
   font-family: 'Ovo', serif;
-  font-size: 24px;
-  color: #454745;
+  font-size: 32px;
+  color: #828E82;
   letter-spacing: 0.2vw;
 }
 
+
+
 /* Button style */
+.animal-button {
+  margin: 25vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-button {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 3em;
+
+  background-color: #3A606E;
+}
 button a{
  display: flex;
  justify-content: center;
@@ -43,14 +64,22 @@ button a{
  text-decoration: none;
 
  font-size: 30px;
+ font-family: 'Ovo', serif;
+ color: #F9F7F4;
 }
 
 
-/* Gallery style */
+
+/* Gallery page style */
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
 }
 
 a{
@@ -60,8 +89,6 @@ a{
 
 .card{
   margin: 2em;
-  /* background-color: white;
-  box-shadow: 0 0 10px rgba(14, 14, 14, 0.25); */
 }
 
 img {
@@ -75,14 +102,47 @@ img {
 }
 
 
+
+/* Individual animal page style */
+.single-animal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Override img styles that are in the gallery */
+.large-photo img {
+  width: auto;
+  height: auto;
+
+  border: none;
+}
+.description {
+  padding: 2em;
+  border: 1px solid #B4B5B4;
+}
+
+figcaption {
+  margin-bottom: 8vh;
+  font-family: 'Sen', sans-serif;
+  color: #3A606E;
+  text-transform: uppercase;
+}
+
+.lorem-picsum {
+  font-family: 'Ovo', serif;
+  color: #828E82;
+}
+
 /* Footer style */
 footer {
   margin: 0;
   padding: 2vh;
 
-  background-color: #F5CB5C;
+  background-color: #F9E5C7;
 
-  color: #242423;
+  color: #3A606E;
   font-family: 'Ovo', serif;
   font-size: 16px;
 }
